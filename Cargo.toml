@@ -1,8 +1,11 @@
 [package]
 name = "vortex"
-version = "0.1.0"
-edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2021"
+version = "0.1.0"
+
+authors = ['pyc4che']
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+bpaf = {version = "0.9.6", features = ["derive", "bright-color"]}
