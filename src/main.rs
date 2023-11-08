@@ -8,6 +8,8 @@ use std::sync::mpsc::{
     channel, Sender
 };
 
+use colored::Colorize;
+
 use tokio::task;
 use tokio::net::TcpStream;
 
@@ -113,13 +115,19 @@ async fn main()
         );
     }
 
-    println!("\nOpen Ports:\n...........");
+    println!(
+        "{}{}", 
+        "\nOpen Ports:".blue().bold(), 
+        "\n...........".normal()
+    );
     output.sort();
 
     for port in output
     {
         println!(
-            "{} - open.", port
+            "{}{}", 
+            port.to_string().green().bold(), 
+            " - open".normal()
         )
     }
 }

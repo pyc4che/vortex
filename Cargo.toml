@@ -7,5 +7,6 @@ version = "0.1.0"
 authors = ['pyc4che']
 
 [dependencies]
+colored = { version = "2.0.4" }
 tokio = { version = "1", features = ["full"] }
 bpaf = {version = "0.9.6", features = ["derive", "bright-color"]}
